@@ -1,5 +1,5 @@
-def hello
-  "Hello world"
+def hello anything
+  puts anything
 end
 
-puts hello
+puts hello "hello world"
