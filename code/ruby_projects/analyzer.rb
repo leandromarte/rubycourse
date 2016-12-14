@@ -10,13 +10,47 @@ puts "Your last name has #{last_name.length} characters in it"
 full_name = first_name + " " + last_name
 puts "Your name in reverse reads #{full_name.reverse}"
 
+def multiply(first_number, second_number)
+  first_number.to_i * second_number.to_i
+end
+
+
+def divide(first_number, second_number)
+  first_number.to_i / second_number.to_i
+end
+
+
+def subtract(first_number, second_number)
+  first_number.to_i - second_number.to_i
+end
+
+
+def mod(first_number, second_number)
+  first_number.to_i % second_number.to_i
+end
+
+puts "what you want to do? 1 - multiply, 2- divide, 3 - subtract, 4 - mod"
+prompt = gets.chomp
+prompt = prompt.to_i
+
 puts "Please enter your first number"
 first_number = gets.chomp
 
 puts "Please enter your second number"
 second_number = gets.chomp
 
-puts "The first number multiplied by the second number is: #{first_number.to_i * second_number.to_i}"
-puts "The first number divided by the second number is: #{first_number.to_f / second_number.to_f}"
-puts "The first number subtracted from the second number is: #{second_number.to_i - first_number.to_i}"
-puts "The first number mod the second number is: #{first_number.to_i % second_number.to_i}"
+if (prompt == 1)
+  puts "The first number multiplied by the second number is: #{first_number.to_i * second_number.to_i}"
+elsif (prompt == 2)
+  puts "The first number divided by the second number is: #{first_number.to_f / second_number.to_f}"
+elsif (prompt == 3)
+  puts "The first number subtracted from the second number is: #{second_number.to_i - first_number.to_i}"
+elsif (prompt == 4)
+  puts "The first number mod the second number is: #{first_number.to_i % second_number.to_i}"
+else 
+  puts "invalid choice"
+end
+
+
+
+
