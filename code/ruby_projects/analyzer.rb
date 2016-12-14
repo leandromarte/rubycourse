@@ -40,13 +40,13 @@ puts "Please enter your second number"
 second_number = gets.chomp
 
 if (prompt == 1)
-  puts "The first number multiplied by the second number is: #{first_number.to_i * second_number.to_i}"
+  puts "The first number multiplied by the second number is: #{multiply(first_number.to_i, second_number.to_i)}"
 elsif (prompt == 2)
-  puts "The first number divided by the second number is: #{first_number.to_f / second_number.to_f}"
+  puts "The first number divided by the second number is: #{divide(first_number.to_f, second_number.to_f)}"
 elsif (prompt == 3)
-  puts "The first number subtracted from the second number is: #{second_number.to_i - first_number.to_i}"
+  puts "The first number subtracted from the second number is: #{subtract(second_number.to_i, first_number.to_i)}"
 elsif (prompt == 4)
-  puts "The first number mod the second number is: #{first_number.to_i % second_number.to_i}"
+  puts "The first number mod the second number is: #{mod(first_number.to_i, second_number.to_i)}"
 else 
   puts "invalid choice"
 end
