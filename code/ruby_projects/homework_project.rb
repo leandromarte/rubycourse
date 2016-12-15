@@ -28,7 +28,10 @@ loop do
   else 
     puts "Enter the city name: "
     city = gets.chomp
-    puts select_value(dial_book, city).values
+    
+    if dial_book.include?(city)
+      puts select_value(dial_book, city).values
+    end
   end
     
 end
