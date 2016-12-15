@@ -31,6 +31,8 @@ loop do
     
     if dial_book.include?(city)
       puts select_value(dial_book, city).values
+    else
+      puts "Invalid city name. Try again"
     end
   end
     
