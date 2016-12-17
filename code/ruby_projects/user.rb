@@ -6,16 +6,30 @@ class User
     @email = email
   end
   
-  #testing if i can override a setter
-  def email=(email)
-    puts "setting email"
-    @email = email
+  def run
+    puts "User running..."
   end
 end
 
-u = User.new("Juca", "juca@juca.com")
-u1 = User.new("Jao", "jao@juca.com")
+class Buyer < User
+  def run
+    puts "Buyer running..."  
+  end
+end
 
+class Seller < User
+  
+end
 
-puts u1.name + " " + u1.email
-u1.email = "jao@jao.com"
+class Admin < User
+  
+end
+
+buyer1 = Buyer.new("buyer1", "b1@x.com")
+buyer1.run
+
+seller1 = Seller.new("seller1", "s1@x.com")
+seller1.run
+
+admin1 = Admin.new("admin1", "a1@x.com")
+admin1.run
