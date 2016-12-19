@@ -1,4 +1,13 @@
+module Destructable
+  def destroy(any_object)
+    self.run
+    puts "destroying..."
+  end
+end
+
 class User
+  include Destructable
+  
   attr_accessor :name, :email
   
   def initialize(name, email)
@@ -27,6 +36,7 @@ end
 
 buyer1 = Buyer.new("buyer1", "b1@x.com")
 buyer1.run
+buyer1.destroy buyer1
 
 seller1 = Seller.new("seller1", "s1@x.com")
 seller1.run
